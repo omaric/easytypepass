@@ -99,7 +99,10 @@ function shuffle(array) {
   return array;
 }
 
-/** Symbols need escaping so they don't mess up the HTML. This is invisible to the generated code in the browser, at least in FF. */
+/**
+ * Symbols need escaping so they don't mess up the HTML. This is invisible to the generated code
+ * in the browser, at least in Firefox.
+ */
 function escapeHtml(unsafe) {
     return unsafe
          .replace(/&/g, "&amp;")
@@ -149,12 +152,11 @@ function genPassword() {
         dubs[i] = functionOrder[i](wordLength);
     }
 
-    if (readability) { // TODO make readable var
+    if (readability) {
         writePassword(dubs.join('<font size="+2px">-</font>'));
     } else {
         writePassword(dubs.join(''))
     }
-    // document.getElementById("demo").innerHtml = "d";
 }
 </script>
 
